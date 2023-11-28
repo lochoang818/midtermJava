@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="Layout/index">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body layout:fragment="body">
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Checkout</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index-2.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="single-product.html">Checkout</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="checkout_area section_gap">
+    <div class="container">
+
+
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Billing Details</h3>
+                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <div class="col-md-6 form-group p_star">
+                            <label for="first">Name</label>
+                            <input type="text" class="form-control" id="first" name="name" th:value="${infor.getUser().getUsername()}">
+                        </div>
+
+
+                        <div class="col-md-6 form-group p_star">
+                            <label for="number">Phone Number</label>
+                            <input type="text" class="form-control" id="number" name="phone" th:value="${infor.getUser().getPhone()}">
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <label for="email">Email</label>
+
+                            <input type="text" class="form-control" id="email" name="email" th:value="${infor.getUser().getEmail()}" >
+                        </div>
+
+                        <div class="col-md-12 form-group p_star">
+                            <label for="add1">Address</label>
+
+                            <input type="text" class="form-control" id="add1" name="address" th:value="${infor.getUser().getAddress()}">
+                        </div>
+
+
+
+
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="order_box">
+                        <h2>Your Order</h2>
+                        <ul class="list">
+                            <li><a href="#">Product <span>Total</span></a></li>
+                            <li th:each="i : ${itemList}">
+                                <a href="#">
+                                    <span class="middle" th:text="${i.getShoes().getName()}+' X' + ${i.getQuantity()}"></span>
+                                    <span class="last" th:text="${i.getPrice()}"></span>
+                                </a></li>
+
+                        </ul>
+                        <ul class="list list_2">
+                            <li><a href="#">Shipping <span>Free</span></a></li>
+                            <li><a href="#">Total <span >$ <span th:text="${totalPrice}" class="totalPriceCart"></span></span></a></li>
+                        </ul>
+
+
+                        <div class="creat_account">
+                            <input type="checkbox" id="f-option4" name="selector">
+                            <label for="f-option4">I’ve read and accept the </label>
+                            <a href="#">terms & conditions*</a>
+                        </div>
+                        <button class="primary-btn"  id="checkoutButton">Proceed to Paypal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
