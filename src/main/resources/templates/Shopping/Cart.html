@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"
+
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="Layout/index">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body layout:fragment="body">
+
+
+
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Shopping Cart</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index-2.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="category.html">Cart</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="cart_area">
+    <div class="container">
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+<!--                    <tr th:each="p : ${itemList}">-->
+<!--                        <td>-->
+<!--                            <div class="media">-->
+<!--                                <div class="d-flex">-->
+<!--                                    <img th:src="${p.getShoes().getImage()}" alt>-->
+<!--                                </div>-->
+<!--                                <div class="media-body">-->
+<!--                                    <p>Minimalistic shop for multipurpose use</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <h5 th:text="${p.getShoes().getName()}"></h5>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <div class="product_count">-->
+<!--                                <input type="text" name="qty" id="sst" maxlength="12" th:value="${p.getQuantity()}" th:data-id="${p.getShoes().getShoesId()}" title="Quantity:" class="input-text qty">-->
+<!--                                <button  class="increase items-count btnPlus" type="button" th:data-id="${p.getShoes().getShoesId()}"><i class="lnr lnr-chevron-up" ></i></button>-->
+<!--                                <button  class="reduced items-count btnMinus" type="button" th:data-id="${p.getShoes().getShoesId()}"><i class="lnr lnr-chevron-down" ></i></button>-->
+<!--                            </div>-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                            <h5 th:text="${p.getPrice()}" th:data-id="${p.getShoes().getShoesId()}"></h5>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!-- Check if itemList is null or empty -->
+<tr th:if="${#lists.isEmpty(itemList)}">
+    <td colspan="4">
+        <p>No product here</p>
+    </td>
+</tr>
+<!-- Loop through itemList if it is not null or empty -->
+<tr th:each="p : ${itemList}" th:if="${not #lists.isEmpty(itemList)}">
+    <td>
+        <div class="media">
+            <div class="d-flex">
+                <img th:src="${p.getShoes().getImage()}" alt>
+            </div>
+            <div class="media-body">
+                <p>Minimalistic shop for multipurpose use</p>
+            </div>
+        </div>
+    </td>
+    <td>
+        <h5 th:text="${p.getShoes().getName()}"></h5>
+    </td>
+    <td>
+        <div class="product_count">
+            <input type="text" name="qty" id="sst" maxlength="12" th:value="${p.getQuantity()}" th:data-id="${p.getShoes().getShoesId()}" title="Quantity:" class="input-text qty">
+            <button class="increase items-count btnPlus" type="button" th:data-id="${p.getShoes().getShoesId()}"><i class="lnr lnr-chevron-up"></i></button>
+            <button class="reduced items-count btnMinus" type="button" th:data-id="${p.getShoes().getShoesId()}"><i class="lnr lnr-chevron-down"></i></button>
+        </div>
+    </td>
+    <td>
+        <h5 th:text="${p.getPrice()}" th:data-id="${p.getShoes().getShoesId()}"></h5>
+    </td>
+</tr>
+
+
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <h5>Subtotal</h5>
+                        </td>
+                        <td>
+                            <h5  class="totalPriceCart" th:text="${totalPrice}"></h5>
+                        </td>
+                    </tr>
+                    <tr class="shipping_area">
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <h5>Shipping</h5>
+                        </td>
+                        <td>
+                            <h5>Free ship</h5>
+                        </td>
+                    </tr>
+                    <tr class="out_button_area">
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            <div class="checkout_btn_inner d-flex align-items-center">
+                                <a class="gray_btn" th:href="@{/Shop/Menu}">Continue Shopping</a>
+                                <a class="primary-btn" th:href="@{/Order/Checkout}">Proceed to checkout</a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
