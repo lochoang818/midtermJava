@@ -39,6 +39,9 @@ Sau đó import file midterm.sql đã tải về
 ![image](https://github.com/lochoang818/midtermJava/assets/143815472/d5dcc53d-7e60-4f18-9a01-468ab47901df)
 
    Bước 3 Nhập [local](http://localhost:8080/auth/login)http://localhost:8080/auth/login
+
+   Với tài khoản: 52100@student.tdtu.edu.vn
+   Mật khẩu: 1234567
    
   ![image](https://github.com/lochoang818/midtermJava/assets/143815472/6ac8db81-3769-4a7a-b5f0-efa80cc09d41)
 
