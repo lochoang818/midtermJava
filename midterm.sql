@@ -115,7 +115,7 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES ('52100818@student.tdtu.edu.vn1','0853355396','125 tân bình','In Progress',208,4),('lhihi@gmail.com1','','','In Progress',190,3),('lhihi@gmail.com2','','','In Progress',50,3),('lhihi@gmail.com3','','','In Progress',84,3),('lhihi@gmail.com4','','','In Progress',1991,3),('lhihi@gmail.com5',NULL,NULL,'Ordering',0,3),('loc@gmail.com1','123123','abcqưeqweqwe','In Progress',467,1),('loc@gmail.com2','123123','abc','Ordering',0,1),('null1',NULL,NULL,'Ordering',0,2),('null2',NULL,NULL,'Ordering',0,2),('null3',NULL,NULL,'Ordering',0,2),('null4',NULL,NULL,'Ordering',0,2),('null5',NULL,NULL,'Ordering',0,2),('null6',NULL,NULL,'Ordering',0,2),('null7',NULL,NULL,'Ordering',0,2),('null8',NULL,NULL,'Ordering',0,2);
+INSERT INTO `orders` VALUES ('52100@student.tdtu.edu.vn1','0853355396','125 tân bình','In Progress',392,5),('52100@student.tdtu.edu.vn2','0853355396','125 tphcm','In Progress',1464,5),('52100818@student.tdtu.edu.vn1','0853355396','125 tân bình','In Progress',208,4),('loc@gmail.com1','123123','abcqưeqweqwe','In Progress',467,1),('loc@gmail.com2','123123','abc','Ordering',0,1),('lochoang@gmail.com1','0853355396','125 Hoàng Hoa Thám','In Progress',874,10),('lochoangtdt@gmail.com1','0853355396','123 Tân Bình','In Progress',796,12);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,7 +179,7 @@ CREATE TABLE `shoes_order` (
 
 LOCK TABLES `shoes_order` WRITE;
 /*!40000 ALTER TABLE `shoes_order` DISABLE KEYS */;
-INSERT INTO `shoes_order` VALUES ('52100818@student.tdtu.edu.vn1',4,180,2),('52100818@student.tdtu.edu.vn1',6,28,1),('lhihi@gmail.com1',1,40,2),('lhihi@gmail.com2',2,50,2),('lhihi@gmail.com3',6,84,3),('lhihi@gmail.com4',1,80,4),('lhihi@gmail.com4',2,800,32),('lhihi@gmail.com4',4,90,1),('lhihi@gmail.com4',5,148,4),('lhihi@gmail.com4',8,873,9),('lhihi@gmail.com5',3,150,3),('lhihi@gmail.com5',4,270,3),('lhihi@gmail.com5',8,97,1),('loc@gmail.com1',1,40,2),('loc@gmail.com1',2,100,4),('loc@gmail.com1',3,250,5),('loc@gmail.com1',4,180,2),('loc@gmail.com1',5,37,1),('loc@gmail.com2',4,90,1);
+INSERT INTO `shoes_order` VALUES ('52100@student.tdtu.edu.vn1',1,80,4),('52100@student.tdtu.edu.vn1',18,312,4),('52100@student.tdtu.edu.vn2',11,544,4),('52100@student.tdtu.edu.vn2',19,920,5),('52100818@student.tdtu.edu.vn1',4,180,2),('52100818@student.tdtu.edu.vn1',6,28,1),('loc@gmail.com1',1,40,2),('loc@gmail.com1',2,100,4),('loc@gmail.com1',3,250,5),('loc@gmail.com1',4,180,2),('loc@gmail.com1',5,37,1),('loc@gmail.com2',4,90,1),('lochoang@gmail.com1',3,250,5),('lochoang@gmail.com1',18,624,8),('lochoangtdt@gmail.com1',10,552,3),('lochoangtdt@gmail.com1',12,244,4);
 /*!40000 ALTER TABLE `shoes_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,7 +202,7 @@ CREATE TABLE `user` (
   `verification_code` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -211,7 +211,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'abc','loc@gmail.com',_binary '','loc hoang','1234567','123123','user','1',NULL),(2,NULL,NULL,_binary '\0',NULL,'$2a$10$lKawyvkE9ZS8hdOuFGaYm.nHTJ6zISJMTZh6.6Jpclu85mByBg0RK',NULL,NULL,NULL,'loc123@gmail.com'),(3,NULL,'lhihi@gmail.com',_binary '\0',NULL,'$2a$10$Yf81wvdGwp3G4SougfwVluhKc/3e41hmAgDOEXR/DweaZaO1WZvUG',NULL,'user',NULL,NULL),(4,'125 tân bình','52100818@student.tdtu.edu.vn',_binary '\0',NULL,'$2a$10$xFMAdL/2kNq8u/8z3OKQcuaSkoNe0WsgsDSc34HkT4v/Tv0l/EtZK','0853355396','user',NULL,'ro');
+INSERT INTO `user` VALUES (1,'abc','loc@gmail.com',_binary '','loc hoang','1234567','123123','user','1',NULL),(4,'125 tân bình','52100818@student.tdtu.edu.vn',_binary '\0',NULL,'$2a$10$xFMAdL/2kNq8u/8z3OKQcuaSkoNe0WsgsDSc34HkT4v/Tv0l/EtZK','0853355396','user',NULL,'ro'),(5,'125 tân bình','52100@student.tdtu.edu.vn',_binary '\0',NULL,'$2a$10$Qy6E75c.I8XjZPhcBSUvz.jZjxH6Rg5AcUajsouWayOxK0KteIsgy','0853355396','user',NULL,'Phú Lộc'),(10,'125 tân bình','lochoang@gmail.com',_binary '\0',NULL,'$2a$10$11wIv83/h.cs4Drv.rwRvuCFT5lCE5q82zTt/nw9DGet6gq6eq5sS','0853355396','user',NULL,'Phú Lộc'),(11,'123 Trường Chinh','loctdt@gmail.com',_binary '\0',NULL,'$2a$10$YNY5mWh4MQ/IWC5/Tb.GDe5M/dFNkIDV9qWoASPmKclyE69sauZnO','0853355396','user',NULL,'Phú Lộc'),(12,'123 Trường Chinh','lochoangtdt@gmail.com',_binary '\0',NULL,'$2a$10$n0WQe3l92lSONoVbAQRrd.CYrGM03Wkt5Ab2CSWTb8Wkn7Oe9d0zu','0853355396','user',NULL,'Phú Lộc');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -224,4 +224,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-28 21:14:26
+-- Dump completed on 2023-11-30 13:18:52
